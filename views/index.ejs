@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Meu Portifólio</title>
+</head>
+<body>
+    <%- include('partials/navbar') %>
+    
+    <div class="introducao">
+        <img src="/img/perfil_github.jpg" alt="Foto" id="imagem_perfil">
+        <div class="texto_introducao">
+            <h1>Quem sou eu?</h1>
+            <hr class="decorativo">
+            <h5 id="conteudo_introducao">Sou Julia Soares Pereira, tenho 18 anos de idade e, atualmente, curso o terceiro semestre de Análise e Desenvolvimento de Sistemas na Fatec Prof. Jessen Vidal, em São José dos Campos.
+                Sou apaixonada pela forma como a tecnologia abre portas e muda realidades, transformando totalmente a visão de mundo de quem se arrisca a se aventurar na área. Foi justamente essa curiosidade, aliada à vontade de inovar e surpreender, que me motivou a seguir no caminho do desenvolvimento.
+                Este portfólio foi criado com o intuito de destacar minhas habilidades, experiências e aprendizados ao longo da minha trajetória acadêmica. Meu objetivo é crescer profissionalmente, colaborando em soluções que unam inovação, eficiência e impacto positivo.</h5>
+        </div>
+    </div>
+
+    <div class="habilidades">
+        <h1>Habilidades</h1>
+        <hr class="decorativo">
+        <br>
+        <br>
+        <div class="conteudo_habilidades">
+            <div class="soft_skills">
+                <h2>Soft skills</h2>
+                <div class="soft_skills_listas">
+                <div class="lista_soft_skills_1">
+                    <h4>Confiabilidade</h4>
+                    <h4>Atenção aos detalhes</h4>
+                    <h4>Empatia</h4>
+                    <h4>Entusiasmo</h4>
+                    <h4>Escrita</h4>
+                    <h4>Resiliência</h4>
+                </div>
+                <div class="lista_soft_skills_2">
+                    <h4>Gestão do tempo</h4>
+                    <h4>Adaptabilidade</h4>
+                    <h4>Habilidades de apresentação</h4>
+                    <h4>Competência cultural</h4>
+                    <h4>Atitude positiva</h4>
+                    <h4>Ética de trabalho</h4>
+                </div>
+            </div>
+            </div>
+            <div class="hard_skills">
+                <h2>Hard skills</h2>
+                <div class="hard_skills_listas">
+                <div class="lista_hard_skills_1">
+                    <h4>HTML</h4>
+                    <h4>CSS</h4>
+                    <h4>Bootstrap</h4>
+                    <h4>Python</h4>
+                    <h4>Java</h4>
+                    <h4>JavaScript</h4>
+                    <h4>MySQL</h4>
+                </div>
+                    <div class="lista_hard_skills_2">
+                    <h4>Figma</h4>
+                    <h4>Scene Builder</h4>
+                    <h4>Word</h4>
+                    <h4>Excel</h4>
+                    <h4>PowerPoint</h4>
+                    <h4>Access</h4>
+                    <h4>Django</h4>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="contato">
+        <h1 class="titulo_contato">Contato</h1>
+        <p style="color: white;">Interessado? Conecte-se comigo!</p>
+        <hr class="decorativo">
+        <br>
+        <br>
+        <div class="contato_todas_caixas">
+            <div class="contato_caixa">
+                <div class="contato_caixa_conteudo">
+            <div class="tipo_contato_div">
+            <i class="fa-brands fa-github"></i>
+            <h5 class="tipo_contato">Github</h5>
+            </div>
+            <a href="https://github.com/juliasoares17" target="_blank" class="endereco_contato"><%= link_github %></a>
+            </div>
+            </div>
+            <div class="contato_caixa">
+                <div class="contato_caixa_conteudo">
+            <div class="tipo_contato_div">
+            <i class="fa-brands fa-linkedin"></i>
+            <h5 class="tipo_contato">LinkedIn</h5>
+            </div>
+            <a href="https://www.linkedin.com/in/julia-soares-pereira-9ab79830b/" target="_blank" class="endereco_contato"><%= link_linkedin %></a>
+            </div>
+            </div>
+            <div class="contato_caixa">
+                <div class="contato_caixa_conteudo">
+            <div class="tipo_contato_div">
+            <i class="fa-solid fa-envelope-open-text"></i>
+            <h5 class="tipo_contato">Email</h5>
+            </div>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=juliapereira1448@gmail.com" target="_blank" class="endereco_contato">
+                <%= endereco_email %>
+              </a>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include('partials/footer') %>
+
+</body>
+</html>

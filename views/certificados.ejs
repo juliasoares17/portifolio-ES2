@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Certificados</title>
+</head>
+<body>
+
+    <%- include('partials/navbar') %>
+
+    <div class="texto_inicio_pagina">
+        <h1>Meus Certificados</h1>
+        <hr class="decorativo_2">
+        <h4>Aqui, você encontrará uma seleção dos cursos, workshops e eventos dos quais participei ao longo da minha jornada em tecnologia e desenvolvimento. Cada certificado representa um passo importante no meu aprendizado contínuo e no compromisso em sempre evoluir. Navegue com carinho por essas experiências!</h4>
+         <br>
+         <br>
+    </div>
+    <div class="todos_certificados">
+        <div class="primeira_linha">
+        <div class="certificado">
+            <h2 class="titulo_certificado">Alura</h2>
+            <div class="contorno_certificado">
+            <img src="/img/certificadoAlura.png" alt="certificado_alura" class="certificado_img">
+            <p class="certificado_duracao">Duração: De 24/01/2025 a 03/02/2025</p>
+            <p class="certificado_descricao">Por meio deste evento, tive a oportunidade de aprimorar minhas habilidades em HTML e
+                CSS e de ter meus primeiros contatos com a linguagem JavaScript, por meio da
+                criação guiada de uma réplica do Spotify.</p>
+            <a href="/certificados/certificadoAlura.pdf" download class="botao_download">
+                <i class="fa-solid fa-download"></i> Baixar certificado
+            </a>
+        </div>
+        </div>
+        <div class="certificado">
+            <h2 class="titulo_certificado">Hashtag Treinamentos</h2>
+            <div class="contorno_certificado">
+            <img src="/img/certificadoHashtag.png" alt="certificado_hashtag" class="certificado_img">
+            <p class="certificado_duracao">Duração: De 13/01/2025 a 16/01/2025</p>
+            <p class="certificado_descricao">Durante a Jornada Python, aprendi mais sobre o potencial do Python e desenvolvi quatro projetos: um automatizador de tarefas, uma análise de cancelamentos de clientes, uma IA para previsões e um chat ao vivo.</p>
+            <a href="/certificados/certificadoHashtag.pdf" download class="botao_download">
+                <i class="fa-solid fa-download"></i> Baixar certificado
+            </a>
+        </div>
+        </div>
+    </div>
+    <div class="certificado">
+        <h2 class="titulo_certificado">Senai "Santos Dumont"</h2>
+        <div class="contorno_certificado">
+        <img src="/img/certificadoSenai.png" alt="certificado_senai" class="certificado_img">
+        <p class="certificado_duracao">Duração: De 14/06/2023 a 03/07/2023</p>
+        <p class="certificado_descricao">Estudando o conteúdo deste curso, aprimorei minha compreensão acerca de
+            conceitos como representações de algoritmos, tipos de dados, variáveis
+            indexadas, expressões aritméticas, literais e lógicas e estruturas de repetição e
+            condição.</p>
+        <a href="/certificados/certificadoSenai.pdf" download class="botao_download">
+            <i class="fa-solid fa-download"></i> Baixar certificado
+        </a>
+    </div>
+    </div>
+    </div>
+
+    <%- include('partials/footer') %>
+    
+</body>
+</html>

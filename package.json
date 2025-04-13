@@ -1,0 +1,30 @@
+{
+  "name": "portifolio_juliasoares",
+  "version": "1.0.0",
+  "description": "portifolio academico para engenharia de software 2, solicitado pelo professor claudio etelvino de lima",
+  "keywords": [
+    "portifolio",
+    "node",
+    "express"
+  ],
+  "homepage": "https://github.com/juliasoares17/portifolio-ES2#readme",
+  "bugs": {
+    "url": "https://github.com/juliasoares17/portifolio-ES2/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juliasoares17/portifolio-ES2.git"
+  },
+  "license": "ISC",
+  "author": "julia soares pereira",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "portifolio_juliasoares": "file:"
+  }
+}

@@ -1,0 +1,438 @@
+body {
+    background: linear-gradient(to bottom, #4a2554 1%, #794c84 60%, #351b3d 100%);
+    font-family: Arial, sans-serif;
+  }
+  nav i{
+    color: white;
+    margin-right: 0.5%;
+  }
+
+  .decorativo {
+    border: none;
+    height: 1px;
+    width: 80%;
+    background: linear-gradient(to left, transparent, #d5b8e8);
+    display: block;
+    margin-right: 20rem;
+  }
+
+  .decorativo_2 {
+    border: none;
+    height: 1px;
+    width: 80%;
+    background: linear-gradient(to left, transparent, #d5b8e8, transparent);
+    display: block;
+  }
+
+  .navbar {
+    padding: 1% 1% 0 1%;
+    margin-bottom: 4%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .navbar_principal{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  #imagem_perfil{
+    width: 16%;
+    border-radius: 80%;
+    height: 255px;
+  }
+
+  #titulo_navbar{
+    text-decoration: none;
+    font-size: 150%;
+    color: white;
+    font-weight: 600;
+    cursor: default;
+  }
+
+  .item_navbar{
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s ease;
+  }
+
+  .item_navbar:hover {
+    transform: scale(1.08);
+    font-weight: 200;
+  }
+
+  #itens_navbar{
+    display: flex;
+    gap: 20px;
+    justify-content: right;
+  }
+
+  .introducao{
+    display: flex;
+    flex-direction: row;
+    margin: 0 70px 0 70px;
+  }
+
+  .texto_introducao{
+    width: 70%;
+    margin-left: 3%;
+    color: white;
+    background-color: #5a2b66;
+    height: 50%;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  #conteudo_introducao{
+    font-weight: 100;
+    font-size: 92%;
+  }
+
+  .habilidades{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: white;
+  }
+
+  .habilidades h1{
+    margin-right: 89%;
+  }
+
+  .conteudo_habilidades{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-right: 1%;
+  }
+
+  .conteudo_habilidades h4 {
+    background-color: #5a2b66;
+    padding: 12% 12%;
+    color: white;
+    border-radius: 16px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    width: 13rem;
+  }
+  
+  .conteudo_habilidades h4:hover {
+    transform: scale(1.08);
+    background-color: #9952bc;
+  }
+
+  /* .soft_skills h4{
+    padding: 11% 9%;
+  }
+
+  .hard_skills h4{
+    padding: 12% 12%;
+  } */
+
+  .conteudo_habilidades h4:hover{
+    transform: scale(1.10); 
+  }  
+
+  .habilidades{
+    margin-left: 6%;
+    margin-top: 4%;
+  }
+
+  .hard_skills{
+    margin-right: 22%;
+  }
+
+  .hard_skills h2, .soft_skills h2{
+    text-align: center;
+  }
+
+  .hard_skills_listas, .soft_skills_listas{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+  }
+
+    .texto_inicio_pagina{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+    }
+
+    .texto_inicio_pagina h4{
+        text-align: center;
+        font-weight: 100;
+        width: 80%;
+    }
+
+    .todos_certificados{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2.1rem;
+        margin-bottom: 11%;
+    }
+
+    .primeira_linha, .segunda_linha{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    .titulo_certificado{
+        color: white;
+    }
+
+    .titulo_projeto{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1.1rem;
+      justify-content: center;
+    }
+
+    .titulo_projeto i {
+      font-size: 2rem;
+      color: #8d49a7;
+      transition: all 0.2s ease;
+    }
+
+    .titulo_projeto i:hover {
+      color: #bd89de; 
+      transform: scale(1.10);
+      cursor: pointer;
+      }
+
+
+
+    /* .decorativo_certificados { */
+        /* border: none;
+        height: 1px;
+        width: 80%; 
+        background: linear-gradient(to left, transparent, #d5b8e8, transparent);
+        display: block;
+        margin-bottom: 2rem; */
+        
+        /* all: unset;
+        display: block;
+        width: 100%;
+        height: 2px;
+        border-top: 2px solid #ccc;
+        margin: 0.5rem auto 1rem auto; */
+      /* } */
+
+    .certificado{
+        background-color: #5a2b66;
+        width: 45%;
+        padding: 1.5rem;
+        border-radius: 2rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .contorno_certificado, .contorno_certificado_2{
+        border: 0.2rem solid rgba(255, 255, 255, 0.3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.2rem;
+        border-radius: 2rem;
+        height: 82%;
+    }
+
+    .contorno_certificado{
+      height: 82%;
+    }
+
+    .contorno_certificado_2{
+      height: 87%;
+    }
+
+    .certificado h2{
+        text-align: center;
+    }
+
+  .certificado_img{
+    width: 30rem;
+    border-radius: 1rem;
+  }
+
+  #projeto_img{
+    width: 16rem;
+  }
+
+  #projeto_img_2{
+    width: 23rem;
+  }
+
+  #projeto_img_3{
+    width: 22rem;
+  }
+
+  #projeto_img_4{
+    margin-top: 2rem;
+    width: 27rem;
+  }
+
+  .certificado_duracao{
+    color: white;
+    font-weight: 100;
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  .certificado_descricao{
+    color: white;
+    width: 80%;
+    text-align: center;
+  }
+
+  .botao_download{
+    padding: 0.6rem;
+    background-color: #84459d; /* Roxo suave */
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .botao_download i {
+    font-size: 1rem;
+    }
+
+    .botao_download:hover {
+    background-color: #b47ed5; /* Roxo mais claro ao passar o mouse */
+    transform: scale(1.08);
+    color: white;
+    }
+
+    .subtitulo_pagina{
+      font-weight: 100;
+      font-size: 0.96rem;
+    }
+
+    .contato{
+      margin-left: 6%;
+      margin-bottom: 12%;
+    }
+
+    .titulo_contato{
+      color: white;
+    }
+
+    .contato_todas_caixas{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .contato_caixa{
+      background-color: #5a2b66;
+      width: 22%;
+      border-radius: 16px;
+      padding: 1rem;
+      padding-bottom: 1.5rem;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .contato_caixa i {
+      color: #8d49a7;
+      font-size: 2.2rem;
+    }
+
+    .contato_caixa_conteudo{
+      margin-left: 5%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tipo_contato_div{
+      display: flex;
+      flex-direction: row;
+      gap: 5%;
+      align-items: center;
+    }
+
+    .tipo_contato{
+      color: white;
+      font-size: 1.2rem;
+    }
+
+    .endereco_contato{
+      color: #8d49a7;
+      transition: all 0.2s ease;
+    }
+
+    .endereco_contato:hover {
+      color: #bd89de; 
+      transform: scale(1.06);
+      cursor: pointer;
+    }
+
+    .footer{
+      margin-left: 6%;
+      margin-bottom: 2%;
+      color: #734584;
+    }
+
+    .curriculo_download{
+      width: fit-content;
+      text-decoration-color: #734584;
+    }
+
+    .curriculo_download_texto{
+      width: fit-content;
+      font-weight: 200;
+      transition: all 0.2s ease;
+      color: #734584;
+    }
+
+    .curriculo_download_texto:hover{
+      color: #b47ed5; 
+      transform: scale(1.05);
+      font-weight: 400;
+    }
+
+    .item_atalhos{
+      color: #734584;
+      text-decoration-color: #734584;
+      transition: all 0.2s ease;
+      width: fit-content;
+    }
+
+    .item_atalhos_texto{
+      font-weight: 400;
+      color: #734584;
+      transition: all 0.2s ease;
+    }
+
+    .item_atalhos:hover{
+      color: #b47ed5; 
+      transform: scale(1.05);
+      font-weight: 400;
+    }
+
+    .item_atalhos_texto:hover{
+      color: #b47ed5; 
+      font-weight: 400;
+    }
+    
+    .atalhos{
+      margin-bottom: 2%;
+    }
+
+
