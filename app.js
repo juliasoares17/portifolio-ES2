@@ -16,12 +16,26 @@ app.get('/', function(requisicao, resposta){
 })
 
 app.get('/projetos', function(requisicao, resposta){
+    var nome_projeto_1 = 'Mestre Ágil'
+    var nome_projeto_2 = 'IdScan'
+    var nome_projeto_3 = 'InsightFlow'
+    var nome_projeto_4 = 'PSW-12'
     resposta.render('projetos', {
+        nome_projeto_1: nome_projeto_1,
+        nome_projeto_2: nome_projeto_2,
+        nome_projeto_3: nome_projeto_3,
+        nome_projeto_4: nome_projeto_4
     })
 })
 
 app.get('/certificados', function(requisicao, resposta){
+    var certificado_1 = 'Alura'
+    var certificado_2 = 'Hashtag Treinamentos'
+    var certificado_3 = 'Senai "Santos Dumont"'
     resposta.render('certificados', {
+        certificado_1: certificado_1,
+        certificado_2: certificado_2,
+        certificado_3: certificado_3
     })
 })
 
