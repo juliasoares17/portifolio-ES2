@@ -7,6 +7,49 @@ body {
     margin-right: 0.5%;
   }
 
+  .primeira_linha_introducao {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 3% 0 0;
+  }
+
+  .curriculo_download{
+    padding: 0.6rem;
+    background-color: #84459d; /* Roxo suave */
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 10rem;
+    height: 2rem;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+.curriculo_download p{
+  font-weight: 300;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+ }
+
+  .curriculo_download:hover{
+    background-color: #b47ed5; /* Roxo mais claro ao passar o mouse */
+    transform: scale(1.08);
+    color: white;
+  }
+
+  .alinhar_baixar_curriculo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
   .decorativo {
     border: none;
     height: 1px;
@@ -387,24 +430,6 @@ body {
       margin-left: 6%;
       margin-bottom: 2%;
       color: #734584;
-    }
-
-    .curriculo_download{
-      width: fit-content;
-      text-decoration-color: #734584;
-    }
-
-    .curriculo_download_texto{
-      width: fit-content;
-      font-weight: 200;
-      transition: all 0.2s ease;
-      color: #734584;
-    }
-
-    .curriculo_download_texto:hover{
-      color: #b47ed5; 
-      transform: scale(1.05);
-      font-weight: 400;
     }
 
     .item_atalhos{
