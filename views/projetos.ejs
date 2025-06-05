@@ -31,7 +31,7 @@
                 <h2 class="titulo_certificado"><%= proj.titulo %></h2>
             </div>
             <div class="contorno_certificado_2">
-            <img src="<%= proj.imagem_projeto %>" alt="img_projeto" style="width: <%= proj.largura_imagem %>;<%= proj.id === 4 ? ' margin-top: 2rem;' : '' %>;">
+            <img src="<%= proj.imagem_projeto %>" alt="img_projeto" style="width: <%= proj.largura_imagem || '20rem' %><%= proj.id === 4 ? '; margin-top: 2rem;' : '' %>">
             <p class="certificado_duracao"><%= proj.legenda %></p>
             <p class="certificado_descricao"><%= proj.descricao_problema %></p>
             <p class="certificado_descricao"><%= proj.descricao_desafios %></p>

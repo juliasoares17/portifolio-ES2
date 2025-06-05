@@ -1,11 +1,12 @@
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser');
+const con = require('./db/db');
+require('./db/initDB');
 app.set('view engine', 'ejs')
 app.use(express.static('public'));
 app.use(bodyParser.json());
-const con = require('./db/db');
-require('./db/initDB');
+app.use(express.json());
 
 app.get('/', function(requisicao, resposta){
     var link_github = 'https://github.com/juliasoares17'
@@ -116,7 +117,7 @@ app.post('/certificados', async function(requisicao, resposta) {
     const [resultado] = await con.query(sql, [
       instituicao, duracao, descricao, imagem_certificado, pdf_certificado
     ]);
-    resposta.send({ mensagem: `Certificado novo inserido com sucesso.`, id: resultado.insertId, dados: req.body });
+    resposta.send({ mensagem: `Certificado novo inserido com sucesso.`, id: resultado.insertId, dados: requisicao.body });
   } catch (err) {
       console.error('Erro ao inserir certificado: ', err);
       resposta.status(500).send('Erro ao inserir certificado.');
