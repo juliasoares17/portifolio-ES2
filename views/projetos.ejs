@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,7 @@
     
     <%- include('partials/navbar') %>
 
-    <div class="texto_inicio_pagina">
+    <div class="texto_inicio_pagina aparecer">
         <h1>Meus Projetos</h1>
         <hr class="decorativo_2">
         <h4>Nesta seção, apresento meus principais projetos acadêmicos e pessoais, bem como produções relevantes desenvolvidas ao longo da minha trajetória. Cada projeto é mais do que uma tarefa cumprida: representa uma oportunidade de aplicar conhecimentos técnicos, resolver problemas reais e transformar ideias em soluções concretas.</h4>
@@ -21,104 +21,40 @@
          <br>
     </div>
 
-    <div class="todos_certificados">
-        <div class="primeira_linha">
-        <div class="certificado">
+    <div class="todos_projetos aparecer">
+        <% projetos.forEach(function(proj) { %>
+        <div class="projeto">
             <div class="titulo_projeto">
-                <a href="https://github.com/Titus-System/1Semestre-ADS" target="_blank">
+                <a href="<%= proj.github_projeto %>" target="_blank">
                     <i class="fa-brands fa-github"></i>
                 </a>
-                <h2 class="titulo_certificado"><%= nome_projeto_1 %></h2>
+                <h2 class="titulo_certificado"><%= proj.titulo %></h2>
             </div>
             <div class="contorno_certificado_2">
-            <img src="/img/logo_API_1.png" alt="certificado_alura" id="projeto_img">
-            <p class="certificado_duracao">Projeto acadêmico do primeiro semestre de Análise e Desenvolvimento de Sistemas.</p>
-            <p class="certificado_descricao">Problema abordado:
-                Os profissionais da empresa do cliente enfrentavam dificuldades para compreender e aplicar os princípios do SCRUM no ambiente de trabalho. O “Mestre Ágil” foi desenvolvido para resolver esse problema, oferecendo uma plataforma didática e interativa que simula a aplicação real da metodologia.</p>
-                
-                <p class="certificado_descricao">Desafios enfrentados: Organizar um grande volume de conteúdo de forma clara, intuitiva e escalável, além de garantir um sistema de avaliação eficaz com feedback imediato e relatórios de progresso.</p>
-                
-                <p class="certificado_descricao">Soluções adotadas: A adoção da própria metodologia SCRUM foi essencial para a organização e o progresso do projeto, com entregas contínuas e ajustes rápidos a partir de revisões frequentes. As tarefas foram bem distribuídas entre a equipe, garantindo foco e organização. Tecnologias como Flask, SQLite, Bootstrap e AWS foram essenciais para construir uma plataforma funcional, escalável e visualmente atrativa.</p>
-                
-                <p class="certificado_descricao">Aprendizados obtidos: A equipe aprimorou tanto competências técnicas (como desenvolvimento fullstack e deploy) quanto interpessoais, como comunicação, autogestão e trabalho em equipe. O projeto também reforçou a importância do planejamento incremental e do feedback contínuo.</p>
+            <img src="<%= proj.imagem_projeto %>" alt="img_projeto" style="width: <%= proj.largura_imagem %>;<%= proj.id === 4 ? ' margin-top: 2rem;' : '' %>;">
+            <p class="certificado_duracao"><%= proj.legenda %></p>
+            <p class="certificado_descricao"><%= proj.descricao_problema %></p>
+            <p class="certificado_descricao"><%= proj.descricao_desafios %></p>
+            <p class="certificado_descricao"><%= proj.descricao_solucoes %></p>
+            <p class="certificado_descricao"><%= proj.descricao_aprendizados %></p>
         </div>
         </div>
-        <div class="certificado">
-            <div class="titulo_projeto">
-                <a href="https://github.com/Titus-System/2semestre-ADS" target="_blank">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-                <h2 class="titulo_certificado"><%= nome_projeto_2 %></h2>
-            </div>
-            <div class="contorno_certificado_2">
-            <img src="/img/logo_API_2.png" alt="certificado_hashtag" id="projeto_img_2">
-            <p class="certificado_duracao">Projeto acadêmico do segundo semestre de Análise e Desenvolvimento de Sistemas.</p>
-            <p class="certificado_descricao">Problema abordado:
-                Empresas lidam com bilhões de informações todos os dias, e lidar com essas grandes quantidades manualmente acaba sendo demorado e massante. Diante desse problema, o IdScan surge como uma solução eficiente e offline para extrair e digitalizar informações de RGs por meio de inteligência artificial e OCR, permitindo edição e armazenamento local em um banco relacional.</p>
-
-            <p class="certificado_descricao">Desafios enfrentados:
-                Criar uma aplicação 100% local, sem dependência de serviços externos, garantir que o processamento de imagens e a extração de dados fossem precisos e integrar o uso de IA, OCR e banco de dados MySQL de forma fluida.</p>
-
-                <p class="certificado_descricao">Soluções adotadas:
-                    Utilização da metodologia SCRUM novamente, para facilitar testes e melhorias contínuas, integração com o Ollama para a execução de modelos de linguagem e visão localmente, uso do Tesseract OCR para leitura de textos em imagens e implementação de processamento assíncrono para melhor experiência do usuário.</p>
-
-                <p class="certificado_descricao">Aprendizados obtidos: 
-                    No desenvolvimento do IdScan, pude aprender a integrar IA, OCR e banco de dados local de forma funcional e eficiente, além de me aventurar pelo desenvolvimento de interfaces com Scene Builder. Desenvolver algo cujo processamento fosse 100% offline certamente foi uma experiência diferenciada.</p>
-
-        </div>
-        </div>
-    </div>
-    <div class="segunda_linha">
-    <div class="certificado">
-        <div class="titulo_projeto">
-            <a href="https://github.com/Titus-System/InsightFlow" target="_blank">
-                <i class="fa-brands fa-github"></i>
-            </a>
-            <h2 class="titulo_certificado"><%= nome_projeto_3 %></h2>
-        </div>
-        <div class="contorno_certificado_2">
-        <img src="/img/logo_API_3.png" alt="certificado_senai" id="projeto_img_3">
-        <p class="certificado_duracao">Projeto acadêmico do terceiro semestre de Análise e Desenvolvimento de Sistemas. (em desenvolvimento)</p>
-        <p class="certificado_descricao">Problema abordado:
-            A tomada de decisões no setor de logística e comércio exterior é dificultada pela dispersão e complexidade dos dados, além da falta de ferramentas analíticas eficazes. O InsightFlow surge como uma plataforma centralizada e interativa, que organiza essas informações de forma acessível e oferece recursos para facilitar sua análise.</p>
-
-        <p class="certificado_descricao">Desafios enfrentados:
-            O InsightFlow enfrenta desafios como integrar uma base de dados nacional extensa com precisão, criar visualizações interativas e filtros avançados, além de estruturar um banco de dados robusto. E tudo isso enquanto a equipe ainda se adapta ao uso do React.</p>
-
-            <p class="certificado_descricao">Soluções adotadas:
-                Adotamos um banco de dados relacional em MySQL para garantir precisão e flexibilidade na análise dos dados. As visualizações estão sendo desenvolvidas com bibliotecas compatíveis com React, como Recharts e react-geojson. A equipe segue com a metodologia SCRUM e vem se adaptando ao React de forma gradual, com tarefas bem distribuídas entre front e back-end.</p>
-
-            <p class="certificado_descricao">Aprendizados obtidos: 
-                O desenvolvimento do Insight Flow vem proporcionando um profundo entendimento sobre a aplicação de dados em contextos reais de negócio. A equipe aprendeu a lidar com grandes volumes de dados de forma estruturada, a implementar inteligência de dados de maneira acessível e a criar soluções visuais úteis para públicos não técnicos.</p>
-    </div>
-    </div>
-    <div class="certificado">
-        <div class="titulo_projeto">
-            <a href="https://github.com/juliasoares17/PSW-12" target="_blank">
-                <i class="fa-brands fa-github"></i>
-            </a>
-            <h2 class="titulo_certificado"><%= nome_projeto_4 %></h2>
-        </div>
-        <div class="contorno_certificado_2">
-        <img src="/img/logo_PSW.png" alt="certificado_senai" id="projeto_img_4">
-        <p class="certificado_duracao">Conjunto de projetos desenvolvidos durante um curso de Python e Django.</p>
-        <p class="certificado_descricao">Problema abordado:
-            O evento Pystack Week-12 propôs resolver desafios cotidianos com Python. Trabalhei em soluções para organização pessoal, como o controle de assinaturas e o registro de experiências, transformando essas demandas em aplicações funcionais com backend, visualização de dados e Django.</p>
-
-        <p class="certificado_descricao">Desafios enfrentados:
-            Durante o desenvolvimento dos projetos, lidei com vários conceitos novos, como a geração de gráficos visuais com bibliotecas Python e o próprio uso do framework Django, o que exigiu um esforço extra para compreender sua estrutura. Também estou trabalhando na melhoria da usabilidade das aplicações, tanto visual quanto funcionalmente.</p>
-
-            <p class="certificado_descricao">Soluções adotadas:
-                Para superar os desafios, acompanhei atentamente as aulas e segui aplicando os conceitos estudados para resolver problemas que surgiram ao longo do desenvolvimento. Quanto às melhorias que estou aplicando aos projetos, estou pesquisando para proporcionar uma visualização melhor dos dados do primeiro projeto e personalizar o visual do segundo, além de estar pensando em possíveis funcionalidades novas para tornar as aplicações mais completas.</p>
-
-            <p class="certificado_descricao">Aprendizados obtidos: 
-                Durante o evento, aprofundei meu conhecimento em Python e conheci ferramentas importantes para projetos completos, como SQLModel e Matplotlib. Além disso, o contato com Django me introduziu a novas possibilidades para construir aplicações web escaláveis e organizadas.</p>
-    </div>
-    </div>
-    </div>
+        <% }) %>
     </div>
 
     <%- include('partials/footer') %>
+
+    <script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visivel');
+      }
+    });
+  });
+
+  document.querySelectorAll('.aparecer').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>

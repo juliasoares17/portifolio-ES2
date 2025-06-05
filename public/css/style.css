@@ -1,7 +1,19 @@
 body {
-    background: linear-gradient(to bottom, #4a2554 1%, #794c84 60%, #351b3d 100%);
+    background: linear-gradient(to bottom, #280332 1%, #3f084d 60%, #280332 100%);
     font-family: Arial, sans-serif;
   }
+
+  .aparecer {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.7s ease;
+}
+
+.aparecer.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
   nav i{
     color: white;
     margin-right: 0.5%;
@@ -16,17 +28,17 @@ body {
   }
 
   .curriculo_download{
-    padding: 0.6rem;
-    background-color: #84459d; /* Roxo suave */
+    flex-direction: row;
+    padding: 0.7rem 0.1rem;
+    background-color: #753b8c; /* Roxo suave */
     color: white;
     border-radius: 12px;
     text-decoration: none;
     font-weight: 500;
     transition: all 0.2s ease;
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    gap: 0.5rem;
-    width: 10rem;
+    width: 13rem;
     height: 2rem;
     justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -36,6 +48,7 @@ body {
   font-weight: 300;
   font-family: Arial, sans-serif;
   font-size: 1rem;
+  margin-left: 0.7rem;
  }
 
   .curriculo_download:hover{
@@ -116,14 +129,14 @@ body {
   .introducao{
     display: flex;
     flex-direction: row;
-    margin: 0 70px 0 70px;
+    margin: 0 70px 6rem 70px;
   }
 
   .texto_introducao{
     width: 70%;
     margin-left: 3%;
     color: white;
-    background-color: #5a2b66;
+    background-color: #4e0a5f;
     height: 50%;
     padding: 15px;
     border-radius: 20px;
@@ -138,10 +151,11 @@ body {
   .habilidades{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     color: white;
+    margin-bottom: 4rem;
   }
 
   .habilidades h1{
@@ -150,24 +164,25 @@ body {
 
   .conteudo_habilidades{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    gap: 4rem;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
     margin-right: 1%;
   }
 
   .conteudo_habilidades h4 {
-    background-color: #5a2b66;
-    padding: 12% 12%;
+    background-color: #4e0a5f;
+    padding: 2% 2%;
     color: white;
     border-radius: 16px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
-    width: 13rem;
+    width: 11rem;
   }
   
   .conteudo_habilidades h4:hover {
-    transform: scale(1.08);
+    transform: scale(1.10); 
     background-color: #9952bc;
   }
 
@@ -179,27 +194,26 @@ body {
     padding: 12% 12%;
   } */
 
-  .conteudo_habilidades h4:hover{
-    transform: scale(1.10); 
-  }  
-
-  .habilidades{
-    margin-left: 6%;
-    margin-top: 4%;
+  .habilidades hr{
+    margin-left: 16%;
   }
 
-  .hard_skills{
-    margin-right: 22%;
+  .habilidades h1{
+    margin-left: 15%;
   }
 
   .hard_skills h2, .soft_skills h2{
     text-align: center;
   }
 
-  .hard_skills_listas, .soft_skills_listas{
+  .hard_skills_lista, .soft_skills_lista{
     display: flex;
-    flex-direction: row;
-    gap: 100px;
+    flex-wrap: wrap;             
+    justify-content: center;
+    column-gap: 2rem; 
+    row-gap: 1rem;
+    width: 90%;
+    margin: 0 auto;
   }
 
     .texto_inicio_pagina{
@@ -216,13 +230,22 @@ body {
         width: 80%;
     }
 
-    .todos_certificados{
-        display: flex;
+    .todos_certificados, .todos_projetos{
         justify-content: center;
         align-items: center;
-        flex-direction: column;
-        gap: 2.1rem;
         margin-bottom: 11%;
+    }
+
+    .todos_certificados{
+      display: flex;
+      flex-direction: column;
+        gap: 2.1rem;
+    }
+
+    .todos_projetos{
+      display: grid;
+      grid-template-columns: 1fr 1fr; 
+      gap: 2.1rem;
     }
 
     .primeira_linha, .segunda_linha{
@@ -274,12 +297,24 @@ body {
         margin: 0.5rem auto 1rem auto; */
       /* } */
 
-    .certificado{
-        background-color: #5a2b66;
-        width: 45%;
+    .certificado, .projeto{
+        background-color: #4e0a5f;
         padding: 1.5rem;
         border-radius: 2rem;
         box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .certificado{
+      width: 80%;
+    }
+
+    .projeto{
+      height: 100%;             
+      align-self: stretch;      
+      display: flex;             
+      flex-direction: column;
+      justify-content: space-between; 
+      box-sizing: border-box;
     }
 
     .contorno_certificado, .contorno_certificado_2{
@@ -305,25 +340,8 @@ body {
     }
 
   .certificado_img{
-    width: 30rem;
+    width: 35rem;
     border-radius: 1rem;
-  }
-
-  #projeto_img{
-    width: 16rem;
-  }
-
-  #projeto_img_2{
-    width: 23rem;
-  }
-
-  #projeto_img_3{
-    width: 22rem;
-  }
-
-  #projeto_img_4{
-    margin-top: 2rem;
-    width: 27rem;
   }
 
   .certificado_duracao{
@@ -384,7 +402,7 @@ body {
     }
 
     .contato_caixa{
-      background-color: #5a2b66;
+      background-color: #4e0a5f;
       width: 22%;
       border-radius: 16px;
       padding: 1rem;
@@ -416,12 +434,12 @@ body {
     }
 
     .endereco_contato{
-      color: #8d49a7;
+      color: #ad68c8;
       transition: all 0.2s ease;
     }
 
     .endereco_contato:hover {
-      color: #bd89de; 
+      color: #cfa2eb; 
       transform: scale(1.06);
       cursor: pointer;
     }
